@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="wtliu_canqz">
 <meta property="og:description" content="记录以下自己觉得Java需要注意的地方 基础概念 JDK(Java Development Kit)JRE(Java Runtime Environment)JVM(Java Virtual Machine) 程序写好后JDK先编译.java文件形成字节码.class文件，然后JRE JVM解释.class文件 类和对象： 类：猫对象：这只猫   ‘A’是字符（单引号）    “A”是字符串（双引">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-23T08:44:16.004Z">
+<meta property="og:updated_time" content="2019-10-23T10:40:30.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识记录">
 <meta name="twitter:description" content="记录以下自己觉得Java需要注意的地方 基础概念 JDK(Java Development Kit)JRE(Java Runtime Environment)JVM(Java Virtual Machine) 程序写好后JDK先编译.java文件形成字节码.class文件，然后JRE JVM解释.class文件 类和对象： 类：猫对象：这只猫   ‘A’是字符（单引号）    “A”是字符串（双引">
@@ -192,19 +192,19 @@
         </a>
         
         <a  class=""
-           href="/2019/10/22/java基础知识记录/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="java基础知识记录">java基础知识记录</span>
-            <span class="post-date" title="2019-10-22 22:59:54">2019/10/22</span>
-        </a>
-        
-        <a  class=""
            href="/2019/10/15/我的第一篇博客文章/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="我的第一篇博客文章">我的第一篇博客文章</span>
             <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/22/java基础知识记录/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="java基础知识记录">java基础知识记录</span>
+            <span class="post-date" title="2019-10-22 22:59:54">2019/10/22</span>
         </a>
         
     </nav>
@@ -231,7 +231,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-23 16:44:16'>2019-10-22 22:59</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-23 18:40:30'>2019-10-22 22:59</time>
         
     </div>
     <div class="article-meta">
@@ -302,7 +302,9 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = Math.abs(-<span class="number">12</span>);<span class="comment">//a值为12；去绝对值函数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.round(<span class="number">10.345</span>);<span class="comment">//a值为10；是四舍五入的函数</span></span><br><span class="line"><span class="keyword">double</span> a = Math.randow();<span class="comment">//a值为0~1之间的随机数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.pow(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//a的值为2的3次方，8这里也可以用浮点数</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>for each循环</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] data = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)</span><br><span class="line">&#123;</span><br><span class="line">	data[i] = i;</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k : data )</span><br><span class="line">&#123;</span><br><span class="line">	System.out.println(k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for each循环是对于数组data里面的每一个元素，k的每一轮都是data里的值，直到结束</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] data = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)</span><br><span class="line">&#123;</span><br><span class="line">	data[i] = i;</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k : data )<span class="comment">//注意中间是冒号</span></span><br><span class="line">&#123;</span><br><span class="line">	System.out.println(k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for each循环是对于数组data里面的每一个元素，k的每一轮都是data里的值，直到结束</span></span><br><span class="line">比如求数组中比平均数个更大的数并输出</span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> count= input.nextInt();;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> a;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[count];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numbers.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            numbers[i]=input.nextInt();</span><br><span class="line">            sum=sum+numbers[i];</span><br><span class="line">        &#125;</span><br><span class="line">        a = sum/numbers.length;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k:numbers)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(k&gt;a)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(k);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
 
       
@@ -321,7 +323,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-22, 22:59:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-23, 16:44:16</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-23, 18:40:30</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/22/java基础知识记录/" title="java基础知识记录">http://yoursite.com/2019/10/22/java基础知识记录/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
