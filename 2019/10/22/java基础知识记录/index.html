@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="wtliu_canqz">
 <meta property="og:description" content="记录以下自己觉得Java需要注意的地方 基础概念 JDK(Java Development Kit)JRE(Java Runtime Environment)JVM(Java Virtual Machine) 程序写好后JDK先编译.java文件形成字节码.class文件，然后JRE JVM解释.class文件 类和对象： 类：猫对象：这只猫   ‘A’是字符（单引号）    “A”是字符串（双引">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-23T08:08:48.092Z">
+<meta property="og:updated_time" content="2019-10-23T08:44:16.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识记录">
 <meta name="twitter:description" content="记录以下自己觉得Java需要注意的地方 基础概念 JDK(Java Development Kit)JRE(Java Runtime Environment)JVM(Java Virtual Machine) 程序写好后JDK先编译.java文件形成字节码.class文件，然后JRE JVM解释.class文件 类和对象： 类：猫对象：这只猫   ‘A’是字符（单引号）    “A”是字符串（双引">
@@ -184,6 +184,14 @@
         </a>
         
         <a  class=""
+           href="/2019/10/14/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-10-14 15:46:47">2019/10/14</span>
+        </a>
+        
+        <a  class=""
            href="/2019/10/22/java基础知识记录/"
            data-tag=""
            data-author="" >
@@ -197,14 +205,6 @@
            data-author="" >
             <span class="post-title" title="我的第一篇博客文章">我的第一篇博客文章</span>
             <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/10/14/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-10-14 15:46:47">2019/10/14</span>
         </a>
         
     </nav>
@@ -231,7 +231,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-23 16:08:48'>2019-10-22 22:59</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-23 16:44:16'>2019-10-22 22:59</time>
         
     </div>
     <div class="article-meta">
@@ -282,7 +282,10 @@
 <li>小数默认为double型，float型后面要加上F（如3.14F）</li>
 <li>类定义在包中</li>
 <li>包裹类型</li>
-<li></li>
+<li>成员变量（会自动赋初始值0）与成员函数</li>
+<li>this就是这次调用函数（方法）的那个对象</li>
+<li>构造函数:在构造的时候自动调用，先定义初始话的东西，再执行构造函数里面的东西，构造函数的名字和<strong><em>类的名字完全相同</em></strong>，构造函数<strong><em>无返回类型</em></strong></li>
+<li>构造函数重载  如f()与f(int a)</li>
 </ol>
 <hr>
 <h2 id="具体代码细节"><a href="#具体代码细节" class="headerlink" title="具体代码细节"></a>具体代码细节</h2><ol>
@@ -290,9 +293,16 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> CH =<span class="number">5.4</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>具体new数组对象  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>] <span class="comment">//定义一个长度为100的整型数组</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>] <span class="comment">//定义一个长度为100的整型数组</span></span><br><span class="line"><span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][<span class="number">5</span>]<span class="comment">//定义一个行为3列为5的二维数组</span></span><br></pre></td></tr></table></figure>
 </li>
-<li></li>
+<li><p>字符串是一个预定的类，是对象的管理者，判断数组是否相同就是判断是否是管理同一个数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a =<span class="string">"hello"</span>;</span><br><span class="line">String a =<span class="keyword">new</span> String(<span class="string">"hello"</span>);<span class="comment">//两种定义的方法都相同</span></span><br><span class="line">a.equals(<span class="string">"hello"</span>)==ture;<span class="comment">//比较两个字符串**内容**是否相等，不能用==</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数学函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = Math.abs(-<span class="number">12</span>);<span class="comment">//a值为12；去绝对值函数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.round(<span class="number">10.345</span>);<span class="comment">//a值为10；是四舍五入的函数</span></span><br><span class="line"><span class="keyword">double</span> a = Math.randow();<span class="comment">//a值为0~1之间的随机数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.pow(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//a的值为2的3次方，8这里也可以用浮点数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>for each循环</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] data = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)</span><br><span class="line">&#123;</span><br><span class="line">	data[i] = i;</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k : data )</span><br><span class="line">&#123;</span><br><span class="line">	System.out.println(k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for each循环是对于数组data里面的每一个元素，k的每一轮都是data里的值，直到结束</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 
       
@@ -311,7 +321,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-22, 22:59:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-23, 16:08:48</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-23, 16:44:16</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/22/java基础知识记录/" title="java基础知识记录">http://yoursite.com/2019/10/22/java基础知识记录/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
