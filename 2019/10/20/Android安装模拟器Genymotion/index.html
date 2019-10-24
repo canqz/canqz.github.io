@@ -119,7 +119,15 @@
 
 
 <ul>
-    <li><div class="all active">全部文章</div></li>
+    <li><div class="all active">全部文章<small>(4)</small></div></li>
+    
+        
+            
+            <li><div data-rel="Android">Android<small>(1)</small></div>
+                
+            </li>
+            
+        
     
 </ul>
 <div class="left-bottom">
@@ -175,12 +183,20 @@
     
     <nav id="title-list-nav">
         
-        <a  class=""
+        <a  class="Android "
            href="/2019/10/20/Android安装模拟器Genymotion/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Android安装模拟器Genymotion">Android安装模拟器Genymotion</span>
             <span class="post-date" title="2019-10-20 22:06:59">2019/10/20</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/15/我的第一篇博客文章/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="我的第一篇博客文章">我的第一篇博客文章</span>
+            <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
         </a>
         
         <a  class=""
@@ -197,14 +213,6 @@
            data-author="" >
             <span class="post-title" title="java基础知识记录">java基础知识记录</span>
             <span class="post-date" title="2019-10-22 22:59:54">2019/10/22</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/10/15/我的第一篇博客文章/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="我的第一篇博客文章">我的第一篇博客文章</span>
-            <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
         </a>
         
     </nav>
@@ -227,11 +235,17 @@
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="Android">Android</a>
+            
+        </span>
+        
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-20 22:52:44'>2019-10-20 22:06</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-24 13:11:03'>2019-10-20 22:06</time>
         
     </div>
     <div class="article-meta">
@@ -310,7 +324,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-20, 22:06:59</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-20, 22:52:44</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-24, 13:11:03</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/20/Android安装模拟器Genymotion/" title="Android安装模拟器Genymotion">http://yoursite.com/2019/10/20/Android安装模拟器Genymotion/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -468,6 +482,53 @@
 
 <!--自定义样式设置-->
 <style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
     
     
     .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
