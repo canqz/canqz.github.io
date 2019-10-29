@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="wtliu_canqz">
 <meta property="og:description" content="写在前面 Android中视图（res）和逻辑（java）分离 所有活动都需要在AndroidManifest.mxl中注册   创建活动 新建一个项目（add no activity） 把项目目录改成projet 在Java/com.exmple.activitytext里面建立一个Empty Activity  别勾选Generate Layout File和Launcher Activity">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-29T15:09:47.219Z">
+<meta property="og:updated_time" content="2019-10-29T15:22:21.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建一个活动和布局">
 <meta name="twitter:description" content="写在前面 Android中视图（res）和逻辑（java）分离 所有活动都需要在AndroidManifest.mxl中注册   创建活动 新建一个项目（add no activity） 把项目目录改成projet 在Java/com.exmple.activitytext里面建立一个Empty Activity  别勾选Generate Layout File和Launcher Activity">
@@ -232,6 +232,14 @@
             <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
         </a>
         
+        <a  class="Android "
+           href="/2019/10/29/如何创建一个活动和布局/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="创建一个活动和布局">创建一个活动和布局</span>
+            <span class="post-date" title="2019-10-29 22:24:51">2019/10/29</span>
+        </a>
+        
         <a  class="Java "
            href="/2019/10/22/java基础知识记录/"
            data-tag="Java"
@@ -246,14 +254,6 @@
            data-author="" >
             <span class="post-title" title="最近有感">最近有感</span>
             <span class="post-date" title="2019-10-26 12:41:31">2019/10/26</span>
-        </a>
-        
-        <a  class="Android "
-           href="/2019/10/29/如何创建一个活动和布局/"
-           data-tag="Android"
-           data-author="" >
-            <span class="post-title" title="创建一个活动和布局">创建一个活动和布局</span>
-            <span class="post-date" title="2019-10-29 22:24:51">2019/10/29</span>
         </a>
         
     </nav>
@@ -292,7 +292,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-29 23:09:47'>2019-10-29 22:24</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-29 23:22:21'>2019-10-29 22:24</time>
         
     </div>
     <div class="article-meta">
@@ -314,7 +314,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建活动"><span class="toc-text">创建活动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建和加载布局"><span class="toc-text">创建和加载布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在AndroidManifest-mxl中注册"><span class="toc-text">在AndroidManifest.mxl中注册</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建活动"><span class="toc-text">创建活动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建和加载布局"><span class="toc-text">创建和加载布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在AndroidManifest-mxl中注册"><span class="toc-text">在AndroidManifest.mxl中注册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#toast的用法"><span class="toc-text">toast的用法</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -364,6 +364,14 @@
 </li>
 </ol>
 <hr>
+<h1 id="toast的用法"><a href="#toast的用法" class="headerlink" title="toast的用法"></a>toast的用法</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Toast.makeText(FirstActivity.<span class="keyword">this</span>,<span class="string">"you clicked Button1"</span>,Toast.LENGTH_SHORT).show();</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>三个元素 第一个上下文，第二个显示内容，第三个显示时间长短，最后加一个.show方法 </li>
+<li>在java中添加button的监听器<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Button button1 =(Button) findViewById(R.id.button1);</span><br><span class="line">button1.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Toast.makeText(FirstActivity.<span class="keyword">this</span>,<span class="string">"you clicked Button1"</span>,Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 990187556@qq.com </span>
@@ -381,7 +389,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-29, 22:24:51</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-29, 23:09:47</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-29, 23:22:21</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/29/如何创建一个活动和布局/" title="创建一个活动和布局">http://yoursite.com/2019/10/29/如何创建一个活动和布局/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
