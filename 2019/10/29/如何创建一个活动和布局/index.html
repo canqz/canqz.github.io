@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="wtliu_canqz">
 <meta property="og:description" content="写在前面 Android中视图（res）和逻辑（java）分离 所有活动都需要在AndroidManifest.mxl中注册   创建活动 新建一个项目（add no activity） 把项目目录改成projet 在Java/com.exmple.activitytext里面建立一个Empty Activity  别勾选Generate Layout File和Launcher Activity">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-29T15:05:09.442Z">
+<meta property="og:updated_time" content="2019-10-29T15:09:47.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建一个活动和布局">
 <meta name="twitter:description" content="写在前面 Android中视图（res）和逻辑（java）分离 所有活动都需要在AndroidManifest.mxl中注册   创建活动 新建一个项目（add no activity） 把项目目录改成projet 在Java/com.exmple.activitytext里面建立一个Empty Activity  别勾选Generate Layout File和Launcher Activity">
@@ -216,14 +216,6 @@
             <span class="post-date" title="2019-10-20 22:06:59">2019/10/20</span>
         </a>
         
-        <a  class="Java "
-           href="/2019/10/22/java基础知识记录/"
-           data-tag="Java"
-           data-author="" >
-            <span class="post-title" title="java基础知识记录">java基础知识记录</span>
-            <span class="post-date" title="2019-10-22 22:59:54">2019/10/22</span>
-        </a>
-        
         <a  class=""
            href="/2019/10/14/hello-world/"
            data-tag=""
@@ -240,12 +232,12 @@
             <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
         </a>
         
-        <a  class="Android "
-           href="/2019/10/29/如何创建一个活动和布局/"
-           data-tag="Android"
+        <a  class="Java "
+           href="/2019/10/22/java基础知识记录/"
+           data-tag="Java"
            data-author="" >
-            <span class="post-title" title="创建一个活动和布局">创建一个活动和布局</span>
-            <span class="post-date" title="2019-10-29 22:24:51">2019/10/29</span>
+            <span class="post-title" title="java基础知识记录">java基础知识记录</span>
+            <span class="post-date" title="2019-10-22 22:59:54">2019/10/22</span>
         </a>
         
         <a  class="日记 "
@@ -254,6 +246,14 @@
            data-author="" >
             <span class="post-title" title="最近有感">最近有感</span>
             <span class="post-date" title="2019-10-26 12:41:31">2019/10/26</span>
+        </a>
+        
+        <a  class="Android "
+           href="/2019/10/29/如何创建一个活动和布局/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="创建一个活动和布局">创建一个活动和布局</span>
+            <span class="post-date" title="2019-10-29 22:24:51">2019/10/29</span>
         </a>
         
     </nav>
@@ -292,7 +292,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-29 23:05:09'>2019-10-29 22:24</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-29 23:09:47'>2019-10-29 22:24</time>
         
     </div>
     <div class="article-meta">
@@ -344,11 +344,16 @@
 </ol>
 <hr>
 <h1 id="创建和加载布局"><a href="#创建和加载布局" class="headerlink" title="创建和加载布局"></a>创建和加载布局</h1><ol>
-<li>在res里面创建一个Directory “layout”</li>
-<li>在layout里面创建一个Layout source file 默认的根为LinearLayout</li>
-<li>此时布局已经创建完成，但是没有内容</li>
-<li>建立一个button元素，代码如下<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span> //和父类一样宽</span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> //能噻多少就多大</span></span><br><span class="line"><span class="tag">    <span class="attr">android:text</span>=<span class="string">"button1"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<li><p>在res里面创建一个Directory “layout”</p>
+</li>
+<li><p>在layout里面创建一个Layout source file 默认的根为LinearLayout</p>
+</li>
+<li><p>此时布局已经创建完成，但是没有内容</p>
+</li>
+<li><p>建立一个button元素，代码如下</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span> //和父类一样宽</span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> //能噻多少就多大</span></span><br><span class="line"><span class="tag">    <span class="attr">android:text</span>=<span class="string">"button1"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>去活动中建立一个 setContentView(R.layout.first_layout)可视布局</p>
 </li>
 </ol>
 <hr>
@@ -376,7 +381,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-29, 22:24:51</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-29, 23:05:09</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-29, 23:09:47</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/29/如何创建一个活动和布局/" title="创建一个活动和布局">http://yoursite.com/2019/10/29/如何创建一个活动和布局/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
