@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>创建一个活动和布局 | wtliu_canqz</title>
-  <meta name="keywords" content=" Android ">
-  <meta name="description" content="创建一个活动和布局 | wtliu_canqz">
+  <title>java基础知识1 | wtliu_canqz</title>
+  <meta name="keywords" content=" Java ">
+  <meta name="description" content="java基础知识1 | wtliu_canqz">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="线性表的顺序存储结构12345678910111213#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#define Max 100typedef struct Lnode *List;struct Lnode&amp;#123;	int data[Max];	int last;&amp;#125;;struct Lnode L;List PtrL;//寻找第i个">
 <meta name="keywords" content="数据结构">
@@ -304,9 +304,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-如何创建一个活动和布局" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-java基础知识1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">创建一个活动和布局</h1>
+        <h1 class="article-title">java基础知识1</h1>
     
     <div class="article-meta">
         
@@ -314,21 +314,21 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Android">Android</a>
+                <a href="javascript:" data-rel="Java">Java</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">Android</a>
+            <a href="javascript:" class="color5">Java</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-09 20:33:05'>2019-10-29 22:24</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-14 23:27:02'>2019-10-22 22:59</time>
         
     </div>
     <div class="article-meta">
@@ -361,7 +361,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建活动"><span class="toc-text">创建活动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建和加载布局"><span class="toc-text">创建和加载布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在AndroidManifest-mxl中注册"><span class="toc-text">在AndroidManifest.mxl中注册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#toast的用法"><span class="toc-text">toast的用法</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#记录以下自己觉得Java需要注意的地方"><span class="toc-text">记录以下自己觉得Java需要注意的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础概念"><span class="toc-text">基础概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体代码细节"><span class="toc-text">具体代码细节</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -377,43 +377,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ol>
-<li>Android中视图（res）和逻辑（java）分离</li>
-<li>所有活动都需要在AndroidManifest.mxl中注册</li>
-</ol>
-<hr>
-<h1 id="创建活动"><a href="#创建活动" class="headerlink" title="创建活动"></a>创建活动</h1><ol>
-<li>新建一个项目（add no activity）</li>
-<li>把项目目录改成projet</li>
-<li>在Java/com.exmple.activitytext里面建立一个Empty Activity </li>
-<li>别勾选Generate Layout File和Launcher Activity</li>
-<li>活动创建完成</li>
-</ol>
-<hr>
-<h1 id="创建和加载布局"><a href="#创建和加载布局" class="headerlink" title="创建和加载布局"></a>创建和加载布局</h1><ol>
-<li>在res里面创建一个Directory “layout”</li>
-<li>在layout里面创建一个Layout source file 默认的根为LinearLayout</li>
-<li>此时布局已经创建完成，但是没有内容</li>
-<li>建立一个button元素，代码如下</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span> //和父类一样宽</span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> //能噻多少就多大</span></span><br><span class="line"><span class="tag">    <span class="attr">android:text</span>=<span class="string">"button1"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>去活动中建立一个 setContentView(R.layout.first_layout)可视布局</li>
-</ol>
-<hr>
-<h1 id="在AndroidManifest-mxl中注册"><a href="#在AndroidManifest-mxl中注册" class="headerlink" title="在AndroidManifest.mxl中注册"></a>在AndroidManifest.mxl中注册</h1><ol>
-<li>活动的注册都需要在<application>标签内</application></li>
-<li>在AndroidManifest.mxl写入以下代码 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:allowBackup</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:icon</span>=<span class="string">"@mipmap/ic_launcher"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:roundIcon</span>=<span class="string">"@mipmap/ic_launcher_round"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:supportsRtl</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:theme</span>=<span class="string">"@style/AppTheme"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".FirstActivity"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span>//成为启动器（点入程序的第一个界面）</span><br><span class="line">    <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+        <h1 id="记录以下自己觉得Java需要注意的地方"><a href="#记录以下自己觉得Java需要注意的地方" class="headerlink" title="记录以下自己觉得Java需要注意的地方"></a>记录以下自己觉得Java需要注意的地方</h1><hr>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><ol>
+<li>JDK(Java Development Kit)<br>JRE(Java Runtime Environment)<br>JVM(Java Virtual Machine)</li>
+<li>程序写好后JDK先编译.java文件形成字节码.class文件，然后JRE JVM解释.class文件</li>
+<li>类和对象：<blockquote>
+<p>类：猫<br>对象：这只猫</p>
+</blockquote>
 </li>
+<li>‘A’是字符（单引号）    “A”是字符串（双引号）</li>
+<li>Java全部采用unicode编码机制，其中有汉字</li>
+<li>小数默认为double型，float型后面要加上F（如3.14F）</li>
+<li>类定义在包中</li>
+<li>包裹类型</li>
+<li>成员变量（会自动赋初始值0）与成员函数</li>
+<li>this就是这次调用函数（方法）的那个对象</li>
+<li>构造函数:在构造的时候自动调用，先定义初始话的东西，再执行构造函数里面的东西，构造函数的名字和<strong><em>类的名字完全相同</em></strong>，构造函数<strong><em>无返回类型</em></strong></li>
+<li>构造函数重载  如f()与f(int a)</li>
 </ol>
 <hr>
-<h1 id="toast的用法"><a href="#toast的用法" class="headerlink" title="toast的用法"></a>toast的用法</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Toast.makeText(FirstActivity.<span class="keyword">this</span>,<span class="string">"you clicked Button1"</span>,Toast.LENGTH_SHORT).show();</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>三个元素 第一个上下文，第二个显示内容，第三个显示时间长短，最后加一个.show方法 </li>
-<li>在java中添加button的监听器<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Button button1 =(Button) findViewById(R.id.button1);</span><br><span class="line">button1.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Toast.makeText(FirstActivity.<span class="keyword">this</span>,<span class="string">"you clicked Button1"</span>,Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="具体代码细节"><a href="#具体代码细节" class="headerlink" title="具体代码细节"></a>具体代码细节</h2><ol>
+<li><p>常量赋值 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> CH =<span class="number">5.4</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>具体new数组对象  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>] <span class="comment">//定义一个长度为100的整型数组</span></span><br><span class="line"><span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][<span class="number">5</span>]<span class="comment">//定义一个行为3列为5的二维数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串是一个预定的类，是对象的管理者，判断数组是否相同就是判断是否是管理同一个数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a =<span class="string">"hello"</span>;</span><br><span class="line">String a =<span class="keyword">new</span> String(<span class="string">"hello"</span>);<span class="comment">//两种定义的方法都相同</span></span><br><span class="line">a.equals(<span class="string">"hello"</span>)==ture;<span class="comment">//比较两个字符串**内容**是否相等，不能用==</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数学函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = Math.abs(-<span class="number">12</span>);<span class="comment">//a值为12；去绝对值函数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.round(<span class="number">10.345</span>);<span class="comment">//a值为10；是四舍五入的函数</span></span><br><span class="line"><span class="keyword">double</span> a = Math.randow();<span class="comment">//a值为0~1之间的随机数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.pow(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//a的值为2的3次方，8这里也可以用浮点数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>for each循环</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] data = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)</span><br><span class="line">&#123;</span><br><span class="line">	data[i] = i;</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k : data )<span class="comment">//注意中间是冒号</span></span><br><span class="line">&#123;</span><br><span class="line">	System.out.println(k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for each循环是对于数组data里面的每一个元素，k的每一轮都是data里的值，直到结束</span></span><br><span class="line">比如求数组中比平均数个更大的数并输出</span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> count= input.nextInt();;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> a;</span><br><span class="line">        <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[count];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numbers.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            numbers[i]=input.nextInt();</span><br><span class="line">            sum=sum+numbers[i];</span><br><span class="line">        &#125;</span><br><span class="line">        a = sum/numbers.length;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k:numbers)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(k&gt;a)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(k);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -430,12 +427,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>创建一个活动和布局</p>
+    <p><span class="copy-title">文章标题:</span>java基础知识1</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-29, 22:24:51</p>
-    <p><span class="copy-title">最后更新:</span>2019-11-09, 20:33:05</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/29/如何创建一个活动和布局/" title="创建一个活动和布局">http://yoursite.com/2019/10/29/如何创建一个活动和布局/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-22, 22:59:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-14, 23:27:02</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/22/java基础知识1/" title="java基础知识1">http://yoursite.com/2019/10/22/java基础知识1/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
