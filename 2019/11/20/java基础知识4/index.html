@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>我的第一篇博客文章 | wtliu_canqz</title>
-  <meta name="keywords" content>
-  <meta name="description" content="我的第一篇博客文章 | wtliu_canqz">
+  <title>java基础知识4 | wtliu_canqz</title>
+  <meta name="keywords" content=" Java ">
+  <meta name="description" content="java基础知识4 | wtliu_canqz">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="包和访问权限以及接口注意点 软件包：把类放在不同的文件夹下面，提供命名空间 java -d . Test.java(会生成文件夹-d . 就是生成文件夹的) 一个类的全名应该是“包名”+“.”+“类名” 包名一般是类名倒过来写 包的导入：import 包.类；  Java中的访问权限 public ：可以修饰类，成员变量和成员函数。没有任何权限设置，同一个包中，不同包中都可以访问 protect：">
 <meta name="keywords" content="Java">
@@ -312,19 +312,31 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-java基础知识4" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">我的第一篇博客文章</h1>
+        <h1 class="article-title">java基础知识4</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="Java">Java</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">Java</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-15 20:05:37'>2019-10-15 19:49</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-20 20:52:26'>2019-11-20 20:14</time>
         
     </div>
     <div class="article-meta">
@@ -357,7 +369,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写博客的目的"><span class="toc-text">写博客的目的</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#记录生活"><span class="toc-text">记录生活</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#记录自己Java学习的过程"><span class="toc-text">记录自己Java学习的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#记录自己Android的入坑过程"><span class="toc-text">记录自己Android的入坑过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-text">参考文献</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#包和访问权限以及接口"><span class="toc-text">包和访问权限以及接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注意点"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java中的访问权限"><span class="toc-text">Java中的访问权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口：定义数据交换的标准"><span class="toc-text">接口：定义数据交换的标准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口注意点"><span class="toc-text">接口注意点</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -373,15 +385,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写博客的目的"><a href="#写博客的目的" class="headerlink" title="写博客的目的"></a>写博客的目的</h1><p>内容</p>
-<hr>
-<h2 id="记录生活"><a href="#记录生活" class="headerlink" title="记录生活"></a>记录生活</h2><p>内容</p>
-<hr>
-<h2 id="记录自己Java学习的过程"><a href="#记录自己Java学习的过程" class="headerlink" title="记录自己Java学习的过程"></a>记录自己Java学习的过程</h2><p>内容</p>
-<hr>
-<h2 id="记录自己Android的入坑过程"><a href="#记录自己Android的入坑过程" class="headerlink" title="记录自己Android的入坑过程"></a>记录自己Android的入坑过程</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> </p>
+        <h1 id="包和访问权限以及接口"><a href="#包和访问权限以及接口" class="headerlink" title="包和访问权限以及接口"></a>包和访问权限以及接口</h1><h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><ol>
+<li>软件包：把类放在不同的文件夹下面，提供命名空间</li>
+<li>java -d . Test.java(会生成文件夹-d . 就是生成文件夹的)</li>
+<li>一个类的全名应该是“包名”+“.”+“类名”</li>
+<li>包名一般是类名倒过来写</li>
+<li>包的导入：import 包.类；</li>
+</ol>
+<h2 id="Java中的访问权限"><a href="#Java中的访问权限" class="headerlink" title="Java中的访问权限"></a>Java中的访问权限</h2><ol>
+<li>public ：可以修饰类，成员变量和成员函数。<br>没有任何权限设置，同一个包中，不同包中都可以访问</li>
+<li>protect：可以修饰成员函数和成员变量<br>主要用于子类与父类在不同的包里面。</li>
+<li>default：这个在类或者成员前不加修饰符<br>只能在同一个包中使用</li>
+<li>private：可以修饰成员变量和成员函数<br>只能在本类中使用。</li>
+</ol>
+<h2 id="接口：定义数据交换的标准"><a href="#接口：定义数据交换的标准" class="headerlink" title="接口：定义数据交换的标准"></a>接口：定义数据交换的标准</h2><ol>
+<li>接口是比较存粹的抽象类（里面全是抽象函数）</li>
+<li>接口语法：<blockquote>
+<ol>
+<li>用interface定义</li>
+<li>接口中的方法均属于抽象方法</li>
+<li>接口中的权限都是public</li>
+<li>接口的继承：implements<br>代码如下：</li>
+</ol>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类接口</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">USB</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类接口</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">USBphone</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"read"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Write"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//test函数</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        USBphone usbphone = <span class="keyword">new</span> USBphone();</span><br><span class="line">        USB usb = usbphone;</span><br><span class="line">        usb.read();</span><br><span class="line">        usb.write();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="接口注意点"><a href="#接口注意点" class="headerlink" title="接口注意点"></a>接口注意点</h2><ol>
+<li><p>一个类可以实现多个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> <span class="keyword">implements</span> <span class="title">USB</span>,<span class="title">Wifi</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以向上转型为多个类型</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一个接口可以–继承–多个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">USB</span> <span class="keyword">extends</span> <span class="title">USBphone</span>，<span class="title">WIFI</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 990187556@qq.com </span>
@@ -395,12 +432,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>我的第一篇博客文章</p>
+    <p><span class="copy-title">文章标题:</span>java基础知识4</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-15, 19:49:51</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-15, 20:05:37</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/15/我的第一篇博客文章/" title="我的第一篇博客文章">http://yoursite.com/2019/10/15/我的第一篇博客文章/</a>
+    <p><span class="copy-title">发布时间:</span>2019-11-20, 20:14:14</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-20, 20:52:26</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/20/java基础知识4/" title="java基础知识4">http://yoursite.com/2019/11/20/java基础知识4/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
