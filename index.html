@@ -2,856 +2,639 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  
-
-  
   <title>wtliu_canqz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wtliu_canqz">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="keywords" content>
+  <meta name="description" content="wtliu_canqz">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="包和访问权限以及接口注意点 软件包：把类放在不同的文件夹下面，提供命名空间 java -d . Test.java(会生成文件夹-d . 就是生成文件夹的) 一个类的全名应该是“包名”+“.”+“类名” 包名一般是类名倒过来写 包的导入：import 包.类；  Java中的访问权限 public ：可以修饰类，成员变量和成员函数。没有任何权限设置，同一个包中，不同包中都可以访问 protect：">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础知识4">
+<meta property="og:url" content="http://yoursite.com/2019/11/20/java基础知识4/index.html">
 <meta property="og:site_name" content="wtliu_canqz">
+<meta property="og:description" content="包和访问权限以及接口注意点 软件包：把类放在不同的文件夹下面，提供命名空间 java -d . Test.java(会生成文件夹-d . 就是生成文件夹的) 一个类的全名应该是“包名”+“.”+“类名” 包名一般是类名倒过来写 包的导入：import 包.类；  Java中的访问权限 public ：可以修饰类，成员变量和成员函数。没有任何权限设置，同一个包中，不同包中都可以访问 protect：">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-20T12:52:26.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wtliu_canqz">
-  
-    <link rel="alternate" href="/atom.xml" title="wtliu_canqz" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:title" content="java基础知识4">
+<meta name="twitter:description" content="包和访问权限以及接口注意点 软件包：把类放在不同的文件夹下面，提供命名空间 java -d . Test.java(会生成文件夹-d . 就是生成文件夹的) 一个类的全名应该是“包名”+“.”+“类名” 包名一般是类名倒过来写 包的导入：import 包.类；  Java中的访问权限 public ：可以修饰类，成员变量和成员函数。没有任何权限设置，同一个包中，不同包中都可以访问 protect：">
+
+
+<link rel="icon" href="/img/canqz.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
 </head>
-</html>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">wtliu_canqz</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-java基础知识4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/20/java基础知识4/" class="article-date">
-  <time datetime="2019-11-20T12:14:14.000Z" itemprop="datePublished">2019-11-20</time>
+<aside class="nav mobile">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/canqz.jpg" />
 </a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
+<div class="author">
+    <span>canqz</span>
+</div>
 
-  </div>
-  <div class="article-inner">
+<div class="icon">
     
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/java基础知识4/">java基础知识4</a>
-    </h1>
-  
-
-      </header>
+        <a title="github" href="https://github.com/canqz" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="包和访问权限以及接口"><a href="#包和访问权限以及接口" class="headerlink" title="包和访问权限以及接口"></a>包和访问权限以及接口</h1><h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><ol>
-<li>软件包：把类放在不同的文件夹下面，提供命名空间</li>
-<li>java -d . Test.java(会生成文件夹-d . 就是生成文件夹的)</li>
-<li>一个类的全名应该是“包名”+“.”+“类名”</li>
-<li>包名一般是类名倒过来写</li>
-<li>包的导入：import 包.类；</li>
-</ol>
-<h2 id="Java中的访问权限"><a href="#Java中的访问权限" class="headerlink" title="Java中的访问权限"></a>Java中的访问权限</h2><ol>
-<li>public ：可以修饰类，成员变量和成员函数。<br>没有任何权限设置，同一个包中，不同包中都可以访问</li>
-<li>protect：可以修饰成员函数和成员变量<br>主要用于子类与父类在不同的包里面。</li>
-<li>default：这个在类或者成员前不加修饰符<br>只能在同一个包中使用</li>
-<li>private：可以修饰成员变量和成员函数<br>只能在本类中使用。</li>
-</ol>
-<h2 id="接口：定义数据交换的标准"><a href="#接口：定义数据交换的标准" class="headerlink" title="接口：定义数据交换的标准"></a>接口：定义数据交换的标准</h2><ol>
-<li>接口是比较存粹的抽象类（里面全是抽象函数）</li>
-<li>接口语法：<blockquote>
-<ol>
-<li>用interface定义</li>
-<li>接口中的方法均属于抽象方法</li>
-<li>接口中的权限都是public</li>
-<li>接口的继承：implements<br>代码如下：</li>
-</ol>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类接口</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">USB</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类接口</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">USBphone</span> <span class="keyword">implements</span> <span class="title">USB</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"read"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Write"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//test函数</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        USBphone usbphone = <span class="keyword">new</span> USBphone();</span><br><span class="line">        USB usb = usbphone;</span><br><span class="line">        usb.read();</span><br><span class="line">        usb.write();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:990187556@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=990187556&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
 
-</li>
-</ol>
-<h2 id="接口注意点"><a href="#接口注意点" class="headerlink" title="接口注意点"></a>接口注意点</h2><ol>
-<li><p>一个类可以实现多个接口</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> <span class="keyword">implements</span> <span class="title">USB</span>,<span class="title">Wifi</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以向上转型为多个类型</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>一个接口可以–继承–多个接口</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">USB</span> <span class="keyword">extends</span> <span class="title">USBphone</span>，<span class="title">WIFI</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
 
-      
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(10)</small></div></li>
+    
+        
+            
+            <li><div data-rel="Android">Android<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Java">Java<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="数据结构">数据结构<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="日记">日记<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/img/lwt.jpg">相册</a>
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://github.com/canqz">github</a>
+    
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/20/java基础知识4/" data-id="ck37bavvx000gwwv1jcoadhtd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="10">
 
-    </footer>
-  </div>
-  
-</article>
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
 
-
-  
-    <article id="post-Java基础知识3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/20/Java基础知识3/" class="article-date">
-  <time datetime="2019-11-20T01:49:20.000Z" itemprop="datePublished">2019-11-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/Java基础知识3/">java基础知识3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="好久没更新了"><a href="#好久没更新了" class="headerlink" title="好久没更新了"></a>好久没更新了</h1><h2 id="函数的复写（override"><a href="#函数的复写（override" class="headerlink" title="函数的复写（override)"></a>函数的复写（override)</h2><ol>
-<li>是在继承里面的，是对继承的修改</li>
-<li>父子各有一个成员函数完全相同（返回值，函数名，参数列表都一样）</li>
-<li>super.introduce();这是调用父类的方法，super指的是父类；<br>具体代码如下：里面的的eat函数就是函数的复写<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类person</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String name;</span><br><span class="line">    Person (<span class="keyword">int</span> age,String name)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        System.out.println(<span class="string">"初始化已完成"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"I want to eat.555555"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"I think you are funny"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类student</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.awt.print.Pageable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    Student(<span class="keyword">int</span> age, String name) &#123;</span><br><span class="line">        <span class="keyword">super</span>(age, name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.eat();</span><br><span class="line">        System.out.println(<span class="string">"我是一头猪"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">learn</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"I don't want to learn"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//test函数</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student(<span class="number">10</span>,<span class="string">"lihua"</span>);</span><br><span class="line">        stu1.eat();</span><br><span class="line">        stu1.learn();</span><br><span class="line">        stu1.fun();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行结果如下：</span><br><span class="line">初始化已完成</span><br><span class="line">I want to eat.555555</span><br><span class="line">我是一头猪</span><br><span class="line">I don<span class="string">'t want to learn</span></span><br><span class="line"><span class="string">I think you are funny</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="对象转型"><a href="#对象转型" class="headerlink" title="对象转型"></a>对象转型</h2><ol>
-<li><p>向上转型：把子类变成父类（一定会成功）</p>
-<blockquote>
-<p>注意点1：一个引用能调用那些成员（变量，函数）取决于引用类型<br>注意点2：一个引用调用的具体是哪种方法，取决于这个引用所指向的对象</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Student s = <span class="keyword">new</span> Student();</span><br><span class="line">Person p = s;</span><br><span class="line"><span class="comment">//p里面没有Student里面的东西</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>向下转型：把父类变成子类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Student s1 = <span class="keyword">new</span> Student();</span><br><span class="line">Person p = s1;</span><br><span class="line">Student s2 = (Student) p;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="抽象类与抽象函数"><a href="#抽象类与抽象函数" class="headerlink" title="抽象类与抽象函数"></a>抽象类与抽象函数</h2><ol>
-<li><p>抽象函数：只有函数定义，没有函数体的函数。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用abstract定义的类是抽象类，不能生成对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String name;</span><br><span class="line">    Person(<span class="keyword">int</span> age,String name)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.age=age;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">introduce</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"my name is "</span>+name+<span class="string">",ma age is "</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    Student(<span class="keyword">int</span> age, String name) &#123;</span><br><span class="line">        <span class="keyword">super</span>(age, name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"I want to eat"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//test函数</span></span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student(<span class="number">15</span>,<span class="string">"lihua"</span>);</span><br><span class="line">        stu1.eat();</span><br><span class="line">        stu1.introduce();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>抽象类就是用来继承的，当父亲，子类里面复写抽象函数。</li>
-<li>如果一个类里面有抽象函数，那么这个类必须申明为抽象类</li>
-<li>抽象类里面可以有构造函数；在生成子类的时候调用</li>
-<li>作用之一：提示报错。</li>
-</ol>
-
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/20/Java基础知识3/" data-id="ck37bavwz000vwwv1expthw4t" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-java基础知识2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/14/java基础知识2/" class="article-date">
-  <time datetime="2019-11-14T15:22:09.000Z" itemprop="datePublished">2019-11-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/14/java基础知识2/">java基础知识2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="今天看视频的时候睡着了"><a href="#今天看视频的时候睡着了" class="headerlink" title="今天看视频的时候睡着了"></a>今天看视频的时候睡着了</h1><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
-<li><p>java中只能有单继承 </p>
-</li>
-<li><p>继承的话 不能继承父类的构造函数</p>
-</li>
-<li><p>继承语法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"eat"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">introduce</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"my name is "</span>+name+<span class="string">",my age is "</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类生成对象，子类的构造函数中，必须调用父类的构造函数，会自动添加一行super();</p>
-</li>
-</ol>
-<h2 id="重载："><a href="#重载：" class="headerlink" title="重载："></a>重载：</h2><ol>
-<li>同一个函数名</li>
-<li>参数不一样</li>
-<li>在同一个类中<br>如下：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">pubilc <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"eat "</span>+ food);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"eat"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu1 =<span class="keyword">new</span> Student ();</span><br><span class="line">        stu1.eat();</span><br><span class="line">        stu1.eat(<span class="string">"apple"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><ol>
-<li>名字与类名相同</li>
-<li>新建对象的时候会调用构造函数</li>
-<li>关于this的用法（“我”）<blockquote>
-<p>表示这次调用函数的对象，this.age:表示调用成员变量<br>this(age,name);这是调用构造函数，调用构造函数的时候（本类（非主函数）当中不可以同时构造两个函数，会冲突）<br>构造函数的调用必须在第一行<br>代码如下：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.awt.print.Pageable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    Student()</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">"我什么信息都没有"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    Student(String name)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>();</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    Student(String name,<span class="keyword">int</span> age)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//this();这里就只能调用一个构造函数</span></span><br><span class="line">        <span class="keyword">this</span>(name);</span><br><span class="line">        <span class="keyword">this</span>.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"eat "</span>+ food);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"eat"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">        Student stu1 =<span class="keyword">new</span> Student (<span class="string">"lihua"</span>,<span class="number">15</span>);</span><br><span class="line">        stu1.eat();</span><br><span class="line">        stu1.eat(<span class="string">"apple"</span>);</span><br><span class="line">        System.out.println(stu1.age+stu1.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="static的用法"><a href="#static的用法" class="headerlink" title="static的用法"></a>static的用法</h2><ol>
-<li>包-&gt;类-&gt;成员变量，成员函数  static就是修饰成员变量和成员函数的</li>
-<li>static 修饰的东西可以用类来调用，一个类中只有唯一的一个值</li>
-<li>静态函数如：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//不能调用非静态成员变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>静态代码块，在装载类的时候执行<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">    <span class="comment">//代码块：主要是给静态变量赋初始值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>具体的如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.awt.print.Pageable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"我是一只小白鼠"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student();</span><br><span class="line">        System.out.println(<span class="string">"helloworld"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>执行后为：<br>我是一只小白鼠<br>helloworld</p>
-
-      
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/14/java基础知识2/" data-id="ck37bavvo0005wwv1ccua7q83" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-顺序存储的一般操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/10/顺序存储的一般操作/" class="article-date">
-  <time datetime="2019-11-10T02:23:50.000Z" itemprop="datePublished">2019-11-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/10/顺序存储的一般操作/">数据结构：顺序存储的一般操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="线性表的顺序存储"><a href="#线性表的顺序存储" class="headerlink" title="线性表的顺序存储"></a>线性表的顺序存储</h1><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Max 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Lnode</span> *<span class="title">List</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Lnode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data[Max];</span><br><span class="line">	<span class="keyword">int</span> last;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Lnode</span> <span class="title">L</span>;</span></span><br><span class="line">List PtrL;</span><br><span class="line"><span class="comment">//寻找第i个元素  可以用L.data[i]或者PtrL-&gt;data[i]</span></span><br><span class="line"><span class="comment">//这边List是一个别名，原名是struct Lnode *</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建立一个空指针，初始化</span></span><br><span class="line"><span class="function">List <span class="title">Makeemptylist</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	List PtrL;</span><br><span class="line">	PtrL = (List) <span class="built_in">malloc</span> (<span class="keyword">sizeof</span>(struct Lnode));<span class="comment">//申请内存</span></span><br><span class="line">	<span class="keyword">if</span>(!PtrL)<span class="comment">//判断内存是否申请成功</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"内存申请失败"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	PtrL-&gt;last = <span class="number">-1</span>;<span class="comment">//数组的长度</span></span><br><span class="line">	<span class="keyword">return</span> PtrL;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找PtrL中 x所在的位置，并返回位置的值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x,List PtrL)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> flag;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;PtrL-&gt;last&amp;&amp;x!=PtrL-&gt;data[i];i++);</span><br><span class="line">	<span class="comment">//判断是否溢出或者找到</span></span><br><span class="line">	<span class="keyword">if</span>(i&gt;=PtrL-&gt;last)</span><br><span class="line">	&#123;</span><br><span class="line">		flag = <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		flag = i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> flag;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里用后面先变换，腾出一个位置给其加入</span></span><br><span class="line"><span class="comment">//在PtrL的线性表中，在i-1的位置上插入一个x的值 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> x,List PtrL)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(PtrL-&gt;last==Max<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"表满"</span>);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;Max<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"插入位置不正确"</span>);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(j=PtrL-&gt;last;j&gt;i<span class="number">-1</span>;j--)</span><br><span class="line">	&#123;</span><br><span class="line">		PtrL-&gt;data[j]=PtrL-&gt;data[j<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	PtrL-&gt;data[i<span class="number">-1</span>]=x;</span><br><span class="line">	PtrL-&gt;last++;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里先排前面</span></span><br><span class="line"><span class="comment">//删除元素,在PtrL线性表中删除元素位置为i的元素</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> i,List PtrL)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;PtrL-&gt;last)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"输入的插入的位置不正确"</span>);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(j=i<span class="number">-1</span>;j&lt;PtrL-&gt;last;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		PtrL-&gt;data[j]=PtrL-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	PtrL-&gt;last--;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="写程序时候踩坑的地方和注意点"><a href="#写程序时候踩坑的地方和注意点" class="headerlink" title="写程序时候踩坑的地方和注意点"></a>写程序时候踩坑的地方和注意点</h2><ol>
-<li>在主函数写好后没有对List s初始化，导致一直错误</li>
-<li>在写函数的时候会把PtrL打错</li>
-<li>第一次用vs code写c，环境配了好久，运行也搞了好久</li>
-<li>对整个程序不熟悉，整个流程不知道怎么写</li>
-</ol>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>初始化：建一个List型函数，分配内存，判断内存分配是否成功，对结构体元素赋值（可无），返回List</li>
-<li>查找：循环判断是否溢出或者找到，最后用if判断，返回值为int型，是location</li>
-<li>插入: 先判断数组是否满了，再判断插入的位置是否是正确的位置，然后采用后面先替换原则，腾出位置插入，表厂++</li>
-<li>删除: 先判断插入位置是否正确，然后采用前面先替换原则，表长- -</li>
-</ol>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
-<li><p>malloc的用法</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> s;</span><br><span class="line">s = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)); <span class="comment">//malloc的原函数返回值是void*，这里相当于强制类型转换</span></span><br><span class="line">List PtrL;</span><br><span class="line">PtrL = (List) <span class="built_in">malloc</span> (<span class="keyword">sizeof</span>(struct Lnode));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>引用类型</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(&amp;a,&amp;b)</span></span>;</span><br><span class="line">swap(<span class="number">3</span>,<span class="number">4</span>);<span class="comment">//main函数中是这样用</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="总的函数代码"><a href="#总的函数代码" class="headerlink" title="总的函数代码"></a>总的函数代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Max 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Lnode</span> *<span class="title">List</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Lnode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data[Max];</span><br><span class="line">	<span class="keyword">int</span> last;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Lnode</span> <span class="title">L</span>;</span></span><br><span class="line">List PtrL;</span><br><span class="line"></span><br><span class="line"><span class="comment">//建立一个空指针，初始化</span></span><br><span class="line"><span class="function">List <span class="title">Makeemptylist</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	List PtrL;</span><br><span class="line">	PtrL = (List) <span class="built_in">malloc</span> (<span class="keyword">sizeof</span>(struct Lnode));<span class="comment">//申请内存</span></span><br><span class="line">	<span class="keyword">if</span>(!PtrL)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"内存申请失败"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	PtrL-&gt;last = <span class="number">-1</span>;<span class="comment">//数组的长度</span></span><br><span class="line">	<span class="keyword">return</span> PtrL;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找PtrL中 x所在的位置，并返回位置的值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x,List PtrL)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> flag;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;PtrL-&gt;last&amp;&amp;x!=PtrL-&gt;data[i];i++);</span><br><span class="line">	<span class="comment">//判断是否溢出或者找到</span></span><br><span class="line">	<span class="keyword">if</span>(i&gt;=PtrL-&gt;last)</span><br><span class="line">	&#123;</span><br><span class="line">		flag = <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		flag = i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> flag;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在PtrL的线性表中，在i-1的位置上插入一个x的值，这里用后面先转换 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> x,List PtrL)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(PtrL-&gt;last==Max<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"表满"</span>);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;Max<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"插入位置不正确"</span>);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(j=PtrL-&gt;last;j&gt;i<span class="number">-1</span>;j--)</span><br><span class="line">	&#123;</span><br><span class="line">		PtrL-&gt;data[j]=PtrL-&gt;data[j<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	PtrL-&gt;data[i<span class="number">-1</span>]=x;</span><br><span class="line">	PtrL-&gt;last++;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素,在PtrL线性表中删除元素位置为i的元素，这里用前面排法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> i,List PtrL)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;PtrL-&gt;last)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"输入的插入的位置不正确"</span>);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(j=i<span class="number">-1</span>;j&lt;PtrL-&gt;last;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		PtrL-&gt;data[j]=PtrL-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	PtrL-&gt;last--;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,loc;</span><br><span class="line">	List s;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">	s = Makeemptylist();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		s-&gt;data[i] = i*<span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	s-&gt;last = <span class="number">20</span>;</span><br><span class="line">	loc = Find(x,s);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,loc);</span><br><span class="line">	Insert(<span class="number">3</span>,<span class="number">333</span>,s);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s-&gt;last;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,s-&gt;data[i]);<span class="comment">//输出每个元素值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"总共的元素个数为 %d\n"</span>,s-&gt;last);</span><br><span class="line">	Delete(<span class="number">4</span>,s);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s-&gt;last;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,s-&gt;data[i]);<span class="comment">//输出每个元素值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"总共的元素个数为 %d\n"</span>,s-&gt;last);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/10/顺序存储的一般操作/" data-id="ck37bavvz000jwwv1szw6fqqt" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-如何创建一个活动和布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/29/如何创建一个活动和布局/" class="article-date">
-  <time datetime="2019-10-29T14:24:51.000Z" itemprop="datePublished">2019-10-29</time>
-</a>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-  </div>
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
 
-  </div>
-  <div class="article-inner">
     
-    
-      <header class="article-header">
+    <nav id="title-list-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/如何创建一个活动和布局/">创建一个活动和布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ol>
-<li>Android中视图（res）和逻辑（java）分离</li>
-<li>所有活动都需要在AndroidManifest.mxl中注册</li>
-</ol>
-<hr>
-<h1 id="创建活动"><a href="#创建活动" class="headerlink" title="创建活动"></a>创建活动</h1><ol>
-<li>新建一个项目（add no activity）</li>
-<li>把项目目录改成projet</li>
-<li>在Java/com.exmple.activitytext里面建立一个Empty Activity </li>
-<li>别勾选Generate Layout File和Launcher Activity</li>
-<li>活动创建完成</li>
-</ol>
-<hr>
-<h1 id="创建和加载布局"><a href="#创建和加载布局" class="headerlink" title="创建和加载布局"></a>创建和加载布局</h1><ol>
-<li>在res里面创建一个Directory “layout”</li>
-<li>在layout里面创建一个Layout source file 默认的根为LinearLayout</li>
-<li>此时布局已经创建完成，但是没有内容</li>
-<li>建立一个button元素，代码如下</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span> //和父类一样宽</span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> //能噻多少就多大</span></span><br><span class="line"><span class="tag">    <span class="attr">android:text</span>=<span class="string">"button1"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>去活动中建立一个 setContentView(R.layout.first_layout)可视布局</li>
-</ol>
-<hr>
-<h1 id="在AndroidManifest-mxl中注册"><a href="#在AndroidManifest-mxl中注册" class="headerlink" title="在AndroidManifest.mxl中注册"></a>在AndroidManifest.mxl中注册</h1><ol>
-<li>活动的注册都需要在<application>标签内</application></li>
-<li>在AndroidManifest.mxl写入以下代码 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:allowBackup</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:icon</span>=<span class="string">"@mipmap/ic_launcher"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:roundIcon</span>=<span class="string">"@mipmap/ic_launcher_round"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:supportsRtl</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:theme</span>=<span class="string">"@style/AppTheme"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".FirstActivity"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span>//成为启动器（点入程序的第一个界面）</span><br><span class="line">    <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<hr>
-<h1 id="toast的用法"><a href="#toast的用法" class="headerlink" title="toast的用法"></a>toast的用法</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Toast.makeText(FirstActivity.<span class="keyword">this</span>,<span class="string">"you clicked Button1"</span>,Toast.LENGTH_SHORT).show();</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>三个元素 第一个上下文，第二个显示内容，第三个显示时间长短，最后加一个.show方法 </li>
-<li>在java中添加button的监听器<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Button button1 =(Button) findViewById(R.id.button1);</span><br><span class="line">button1.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Toast.makeText(FirstActivity.<span class="keyword">this</span>,<span class="string">"you clicked Button1"</span>,Toast.LENGTH_SHORT).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-      
+        <a  class="Android "
+           href="/2019/10/20/Android安装模拟器Genymotion/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android安装模拟器Genymotion">Android安装模拟器Genymotion</span>
+            <span class="post-date" title="2019-10-20 22:06:59">2019/10/20</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/11/20/Java基础知识3/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="java基础知识3">java基础知识3</span>
+            <span class="post-date" title="2019-11-20 09:49:20">2019/11/20</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/10/22/java基础知识1/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="java基础知识1">java基础知识1</span>
+            <span class="post-date" title="2019-10-22 22:59:54">2019/10/22</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/11/14/java基础知识2/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="java基础知识2">java基础知识2</span>
+            <span class="post-date" title="2019-11-14 23:22:09">2019/11/14</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/14/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-10-14 15:46:47">2019/10/14</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/11/20/java基础知识4/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="java基础知识4">java基础知识4</span>
+            <span class="post-date" title="2019-11-20 20:14:14">2019/11/20</span>
+        </a>
+        
+        <a  class="Android "
+           href="/2019/10/29/如何创建一个活动和布局/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="创建一个活动和布局">创建一个活动和布局</span>
+            <span class="post-date" title="2019-10-29 22:24:51">2019/10/29</span>
+        </a>
+        
+        <a  class="数据结构 "
+           href="/2019/11/10/顺序存储的一般操作/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构：顺序存储的一般操作">数据结构：顺序存储的一般操作</span>
+            <span class="post-date" title="2019-11-10 10:23:50">2019/11/10</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/15/我的第一篇博客文章/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="我的第一篇博客文章">我的第一篇博客文章</span>
+            <span class="post-date" title="2019-10-15 19:49:51">2019/10/15</span>
+        </a>
+        
+        <a  class="日记 "
+           href="/2019/10/26/最近有感/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="最近有感">最近有感</span>
+            <span class="post-date" title="2019-10-26 12:41:31">2019/10/26</span>
+        </a>
+        
+    </nav>
+</div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/29/如何创建一个活动和布局/" data-id="ck37bavvm0004wwv1frud749g" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-最近有感" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/26/最近有感/" class="article-date">
-  <time datetime="2019-10-26T04:41:31.000Z" itemprop="datePublished">2019-10-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/日记/">日记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/26/最近有感/">最近有感</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="随便写写"><a href="#随便写写" class="headerlink" title="随便写写"></a>随便写写</h1><p>最近有点颓<br>某个时间会想<br>要是我以前坚持把某件事坚持做下来就好了<br>flag一直在立<br>一直是三分钟热度<br>基本坚持不了一周就熄火了<br>最痛恨自己的是没有坚持一件事的决心和毅力，嗯无论在哪一个方面。</p>
-<h2 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h2><ol>
-<li>今天flag就力这了，恩一个月看完《第一行代码》这本书，今天是2019年10月27日</li>
-<li>学习打卡今日学会创建活动和布局</li>
-</ol>
-
-      
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/26/最近有感/" data-id="ck37bavvu000cwwv1r1le6u3j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-java基础知识1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/22/java基础知识1/" class="article-date">
-  <time datetime="2019-10-22T14:59:54.000Z" itemprop="datePublished">2019-10-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/22/java基础知识1/">java基础知识1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="记录以下自己觉得Java需要注意的地方"><a href="#记录以下自己觉得Java需要注意的地方" class="headerlink" title="记录以下自己觉得Java需要注意的地方"></a>记录以下自己觉得Java需要注意的地方</h1><hr>
-<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><ol>
-<li>JDK(Java Development Kit)<br>JRE(Java Runtime Environment)<br>JVM(Java Virtual Machine)</li>
-<li>程序写好后JDK先编译.java文件形成字节码.class文件，然后JRE JVM解释.class文件</li>
-<li>类和对象：<blockquote>
-<p>类：猫<br>对象：这只猫</p>
-</blockquote>
-</li>
-<li>‘A’是字符（单引号）    “A”是字符串（双引号）</li>
-<li>Java全部采用unicode编码机制，其中有汉字</li>
-<li>小数默认为double型，float型后面要加上F（如3.14F）</li>
-<li>类定义在包中</li>
-<li>包裹类型</li>
-<li>成员变量（会自动赋初始值0）与成员函数</li>
-<li>this就是这次调用函数（方法）的那个对象</li>
-<li>构造函数:在构造的时候自动调用，先定义初始话的东西，再执行构造函数里面的东西，构造函数的名字和<strong><em>类的名字完全相同</em></strong>，构造函数<strong><em>无返回类型</em></strong></li>
-<li>构造函数重载  如f()与f(int a)</li>
-</ol>
-<hr>
-<h2 id="具体代码细节"><a href="#具体代码细节" class="headerlink" title="具体代码细节"></a>具体代码细节</h2><ol>
-<li><p>常量赋值 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> CH =<span class="number">5.4</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>具体new数组对象  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>] <span class="comment">//定义一个长度为100的整型数组</span></span><br><span class="line"><span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][<span class="number">5</span>]<span class="comment">//定义一个行为3列为5的二维数组</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字符串是一个预定的类，是对象的管理者，判断数组是否相同就是判断是否是管理同一个数组</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a =<span class="string">"hello"</span>;</span><br><span class="line">String a =<span class="keyword">new</span> String(<span class="string">"hello"</span>);<span class="comment">//两种定义的方法都相同</span></span><br><span class="line">a.equals(<span class="string">"hello"</span>)==ture;<span class="comment">//比较两个字符串**内容**是否相等，不能用==</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>数学函数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = Math.abs(-<span class="number">12</span>);<span class="comment">//a值为12；去绝对值函数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.round(<span class="number">10.345</span>);<span class="comment">//a值为10；是四舍五入的函数</span></span><br><span class="line"><span class="keyword">double</span> a = Math.randow();<span class="comment">//a值为0~1之间的随机数</span></span><br><span class="line"><span class="keyword">int</span> a = Math.pow(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//a的值为2的3次方，8这里也可以用浮点数</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>for each循环</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] data = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)</span><br><span class="line">&#123;</span><br><span class="line">	data[i] = i;</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k : data )<span class="comment">//注意中间是冒号</span></span><br><span class="line">&#123;</span><br><span class="line">	System.out.println(k);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for each循环是对于数组data里面的每一个元素，k的每一轮都是data里的值，直到结束</span></span><br><span class="line">比如求数组中比平均数个更大的数并输出</span><br><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> count= input.nextInt();;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> a;</span><br><span class="line">        <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[count];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;numbers.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            numbers[i]=input.nextInt();</span><br><span class="line">            sum=sum+numbers[i];</span><br><span class="line">        &#125;</span><br><span class="line">        a = sum/numbers.length;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k:numbers)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(k&gt;a)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(k);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/22/java基础知识1/" data-id="ck37bavva0000wwv1utldxwel" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Android安装模拟器Genymotion" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/20/Android安装模拟器Genymotion/" class="article-date">
-  <time datetime="2019-10-20T14:06:59.000Z" itemprop="datePublished">2019-10-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/20/Android安装模拟器Genymotion/">Android安装模拟器Genymotion</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="下载Genymotion模拟器遇到的问题"><a href="#下载Genymotion模拟器遇到的问题" class="headerlink" title="下载Genymotion模拟器遇到的问题"></a>下载Genymotion模拟器遇到的问题</h1><hr>
-<h2 id="为什么要下载Genymotion"><a href="#为什么要下载Genymotion" class="headerlink" title="为什么要下载Genymotion"></a>为什么要下载Genymotion</h2><ol>
-<li>小编Android studio自带的模拟器启动太慢</li>
-<li>由于小编自己傻瓜式的在系统变量里”添加”了path变量，导致把以前的path变量全部覆盖了，自带的模拟器在最近的使用过程中出现了很多问题</li>
-<li>自己也想体验一下Genymotion到底哪里好用</li>
-</ol>
-<hr>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li>登入官网注册账号<a href="https://www.genymotion.com/" target="_blank" rel="noopener">https://www.genymotion.com/</a> </li>
-<li>注册完后下载，注意一点:因为Genymotion运行需要VirtualBox，所以需要安装这个内存更大的版本</li>
-<li>接下来傻瓜是安装</li>
-<li>安装完成之后，会需要选择手机型号</li>
-<li>我选择了三星s8 ，下载速度超级慢，还不断的下载失败，于是我去找了找网上的资料</li>
-<li>大致过程如下<ol>
-<li>先去自己的c盘目录里找到C:\Users\Administrator\AppData\Local\Genymobile我找的时候真的没有看见那个AppData文件，后来还是通过搜索框找到的，真的没有看见，我找了好久</li>
-<li>查看日志文件genymotion.log里面有这种字样:2019-10-19T23:24:05+08:00 [Genymotion:10928] [debug] GET “<a href="https://cloud.genymotion.com/vmtemplate/getall?genymotion_version=3.0.3&quot;" target="_blank" rel="noopener">https://cloud.genymotion.com/vmtemplate/getall?genymotion_version=3.0.3&quot;</a> 复制其中的网址，去Google里面打开，然后他会自动下载，但是下载速度也是龟速，几k每秒。</li>
-<li>对镜像了解不是很多，本来想通过镜像下载，但是镜像里根本就没有这个文件啊，后来用手机热点搭了梯子出去，用了好多流量呜呜呜</li>
-<li>把下载好的文件复制到C:\Users\用户名\AppData\Local\Genymobile\Genymotion\ova里面。</li>
-<li>接下来打开Genymotion，解压它就好了</li>
-</ol>
-</li>
-<li>这样之后在Android studio里面就可以看见自己刚刚安装的模拟器了，可以运行了</li>
-<li>对于NASDK2.0_Studio的项目，我还是运行不了，版本号已经改正，编译也照常过了，就是不能运行到模拟器上，自己连了手机也不能运行。目前还没有找到解决办法</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/20/Android安装模拟器Genymotion/" data-id="ck37bavvh0001wwv1jhpj0cv4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/15/我的第一篇博客文章/" class="article-date">
-  <time datetime="2019-10-15T11:49:51.000Z" itemprop="datePublished">2019-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="写博客的目的"><a href="#写博客的目的" class="headerlink" title="写博客的目的"></a>写博客的目的</h1><p>内容</p>
-<hr>
-<h2 id="记录生活"><a href="#记录生活" class="headerlink" title="记录生活"></a>记录生活</h2><p>内容</p>
-<hr>
-<h2 id="记录自己Java学习的过程"><a href="#记录自己Java学习的过程" class="headerlink" title="记录自己Java学习的过程"></a>记录自己Java学习的过程</h2><p>内容</p>
-<hr>
-<h2 id="记录自己Android的入坑过程"><a href="#记录自己Android的入坑过程" class="headerlink" title="记录自己Android的入坑过程"></a>记录自己Android的入坑过程</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/15/我的第一篇博客文章/" data-id="ck37bavvt000awwv1oga17fuw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/14/hello-world/" class="article-date">
-  <time datetime="2019-10-14T07:46:47.746Z" itemprop="datePublished">2019-10-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/14/hello-world/" data-id="ck37bavvp0006wwv1fhgn0p92" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日记/">日记</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/11/20/java基础知识4/">java基础知识4</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/20/Java基础知识3/">java基础知识3</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/14/java基础知识2/">java基础知识2</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/10/顺序存储的一般操作/">数据结构：顺序存储的一般操作</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/29/如何创建一个活动和布局/">创建一个活动和布局</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
+<div class="post index">
+    <div class="pjax">
+        <article class="index">
+            <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于canqz"><span class="toc-text">关于canqz</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
+<blockquote>
+<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+</blockquote>
+<blockquote>
+<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+</blockquote>
+<blockquote>
+<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
+<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
+<h2 id="关于canqz"><a href="#关于canqz" class="headerlink" title="关于canqz"></a>关于canqz</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
+<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
+<p>主要功能：</p>
+<ul>
+<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
+<li>pad/手机等移动端适配</li>
+<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+</ul>
+
+        </article>
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 canqz<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        <p>
+            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+        </p>
+        
+        
     </div>
-  </div>
-</footer>
+    <div class="copyright">
+        <p class="footer-entry">©2019 canqz</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#Android','#Java','#数据结构',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
 
 
-<script src="/js/script.js"></script>
 
 
 
-  </div>
-</body>
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/img/lwt.jpg">相册</a>
+    
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://github.com/canqz">github</a>
+    
+</div>
+
+
 </html>
