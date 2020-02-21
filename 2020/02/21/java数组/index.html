@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>我的第一篇博客文章 | wtliu_canqz</title>
-  <meta name="keywords" content>
-  <meta name="description" content="我的第一篇博客文章 | wtliu_canqz">
+  <title>java数组 | wtliu_canqz</title>
+  <meta name="keywords" content=" Java ">
+  <meta name="description" content="java数组 | wtliu_canqz">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git的使用">
@@ -324,19 +324,31 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-java数组" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">我的第一篇博客文章</h1>
+        <h1 class="article-title">java数组</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="Java">Java</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">Java</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-15 20:05:37'>2019-10-15 19:49</time>
+        创建时间:<time class="date" title='更新时间: 2020-02-21 21:26:02'>2020-02-21 21:21</time>
         
     </div>
     <div class="article-meta">
@@ -358,7 +370,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写博客的目的"><span class="toc-text">写博客的目的</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#记录生活"><span class="toc-text">记录生活</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#记录自己Java学习的过程"><span class="toc-text">记录自己Java学习的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#记录自己Android的入坑过程"><span class="toc-text">记录自己Android的入坑过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献"><span class="toc-text">参考文献</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数组"><span class="toc-text">数组</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -374,15 +386,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写博客的目的"><a href="#写博客的目的" class="headerlink" title="写博客的目的"></a>写博客的目的</h1><p>内容</p>
-<hr>
-<h2 id="记录生活"><a href="#记录生活" class="headerlink" title="记录生活"></a>记录生活</h2><p>内容</p>
-<hr>
-<h2 id="记录自己Java学习的过程"><a href="#记录自己Java学习的过程" class="headerlink" title="记录自己Java学习的过程"></a>记录自己Java学习的过程</h2><p>内容</p>
-<hr>
-<h2 id="记录自己Android的入坑过程"><a href="#记录自己Android的入坑过程" class="headerlink" title="记录自己Android的入坑过程"></a>记录自己Android的入坑过程</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> </p>
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
+<li><p>输入字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">char</span> grade = input.next().charAt(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>input.hasnextdouble()的值为ture或者false</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">One</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(input.hasNextDouble())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">double</span> x = input.nextDouble();</span><br><span class="line">            m++;</span><br><span class="line">            sum = sum + x;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(m +<span class="string">"个数和为"</span> + sum);</span><br><span class="line">        System.out.println(<span class="string">"平均值"</span>+(sum/m));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义数组，先创建（容器），再引用赋值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] list = <span class="keyword">new</span> <span class="keyword">int</span>[SIZE];</span><br><span class="line"><span class="comment">//新建一个数组，再赋值；</span></span><br><span class="line"><span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;<span class="comment">//这是新建数组的操作</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FOR-EACH循环</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">double</span> element :list)</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组可以作为函数的参数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">One</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        printArray(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArray</span><span class="params">(<span class="keyword">int</span>[] array)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; array.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.print(array[i]+<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组作为函数的返回值，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] list = reverse(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;list.length;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.print(list[i]+<span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] reverse(<span class="keyword">int</span>[] array)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>,j = array.length - <span class="number">1</span>;i&lt;=j;i++,j--)</span><br><span class="line">    &#123;</span><br><span class="line">        temp = array[i];</span><br><span class="line">        array[i] = array[j];</span><br><span class="line">        array[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多维数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String s[][] = <span class="keyword">new</span> String[<span class="number">2</span>][<span class="number">2</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array类：还需要多了解。记得把作业做了</p>
+</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 990187556@qq.com </span>
@@ -396,12 +424,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>我的第一篇博客文章</p>
+    <p><span class="copy-title">文章标题:</span>java数组</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="canqz">canqz</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-15, 19:49:51</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-15, 20:05:37</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/15/我的第一篇博客文章/" title="我的第一篇博客文章">http://yoursite.com/2019/10/15/我的第一篇博客文章/</a>
+    <p><span class="copy-title">发布时间:</span>2020-02-21, 21:21:58</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-21, 21:26:02</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/21/java数组/" title="java数组">http://yoursite.com/2020/02/21/java数组/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
